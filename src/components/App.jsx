@@ -1,7 +1,7 @@
-import { Profile } from './profile/Profile';
-import user from '../data/user';
+import  Profile  from './profile/Profile';
+import user from 'data/user';
 
-export const App = () => {
+const App = () => {
   return (
     <div
       style={{
@@ -23,3 +23,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;
