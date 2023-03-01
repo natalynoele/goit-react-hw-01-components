@@ -1,22 +1,21 @@
-export const Profile = (props) => {
-                  const {username, avatar, tag, location, stats } = props;
+export const Profile = ({ username, avatar, tag, location, stats }) => {
   return (
     <div>
       <div>
-        <img src={avatar} alt="User avatar"  />
-        <p >{username}</p>
-        <p >{tag}</p>
+        <img src={avatar} alt="User avatar" />
+        <p>{username}</p>
+        <p>{tag}</p>
         <p>{location}</p>
       </div>
 
-      <ul >
+      <ul>
         <li>
-          <span >Followers</span>
-          <span >{stats.followers}</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
-          <span >Views</span>
-          <span >{stats.views}</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </li>
         <li>
           <span>Likes</span>
