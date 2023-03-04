@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
-import State from './State';
+import State from '../State';
 
 const Profile = ({ username, avatar, tag, location, stats }) => {
   const { followers, likes, views } = stats;
@@ -15,9 +15,9 @@ const Profile = ({ username, avatar, tag, location, stats }) => {
         <p className={css.location}>{location}</p>
       </div>
       <ul className={css.stats}>
-        <State label="Followers" quantity={followers} />
-        <State label="Views" quantity={views} />
-        <State label="Likes" quantity={likes} />
+        <State label="Followers" quantity={followers} className="quantity" />
+        <State label="Views" quantity={views} className="quantity" />
+        <State label="Likes" quantity={likes} className="quantity" />
       </ul>
     </div>
   );

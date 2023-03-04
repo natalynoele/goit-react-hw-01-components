@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css'
+import styled from 'styled-components';
 
-const State = ({ label, quantity }) => {
+const Label = styled.span`
+
+`
+
+
+const State = ({ label, quantity, className }) => {
   return (
     <li>
       <span className={css.label}>{label}</span>
-      <span className={css.quantity}>{quantity}</span>
+      <span className={className}>{quantity}</span>
     </li>
   );
 };
