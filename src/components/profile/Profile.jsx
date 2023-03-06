@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import State from '../State';
-import { StatsList, Wrapper, UserName } from './ProfileStyle';
+import { StatsList, Wrapper, UserName, Description } from './ProfileStyle';
 
 
 const Profile = ({ username, avatar, tag, location, stats }) => {
@@ -12,8 +12,8 @@ const Profile = ({ username, avatar, tag, location, stats }) => {
           <img src={avatar} alt="User avatar" />
         </figure>
         <UserName>{username}</UserName>
-        <p>@{tag}</p>
-        <p>{location}</p>
+        <Description>@{tag}</Description>
+        <Description>{location}</Description>
       </div>
       <StatsList>
         <State label="Followers" quantity={followers}  />

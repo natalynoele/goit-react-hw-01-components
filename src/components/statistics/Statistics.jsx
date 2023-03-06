@@ -3,7 +3,7 @@ import State from "components/State";
 import StateList from './StateList';
 import { Section } from './StatisticsStyle';
 
-const Statistic = ({title, stats}) => {
+const Statistics = ({title, stats}) => {
   return (
     <Section>
       { title ? <h2>{title}</h2> : null}
@@ -12,11 +12,11 @@ const Statistic = ({title, stats}) => {
   );    
 };
 
-Statistic.propTypes = {
+Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape
   ),
 };
 
-export default Statistic;
+export default Statistics;

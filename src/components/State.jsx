@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Item, Label, Quantity } from './state/StateStyle';
 
 const State = ({ label, quantity }) => {
   return (
-    <li>
-      <span>{label}</span>
-      <span>{quantity}</span>
-    </li>
+    <Item>
+      <Label>{label}</Label>
+      <Quantity>{quantity}</Quantity>
+    </Item>
   );
 };
 

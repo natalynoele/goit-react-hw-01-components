@@ -1,10 +1,11 @@
 import Profile from './profile/Profile';
-import  Statistic  from './statistics/Statistics';
+import Statistics from './statistics/Statistics';
 import FriendList from './friendList/FriendList';
+import TransactionHistory from './transactionHistory/TransactionHistory';
 import user from 'data/user';
 import data from 'data/data';
 import friends from 'data/friends';
-
+import transactions from 'data/transactions';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
@@ -26,13 +27,10 @@ const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistic
-        title="Upload stats"
-        stats={data}
-      />
-      <FriendList
-        friends={friends}
-      />
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 };
