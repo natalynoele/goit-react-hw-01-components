@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-const Item = styled.li``;
+
 const Status = styled.span`
   display: block;
   width: 20px;
@@ -10,4 +10,4 @@ const Status = styled.span`
 const Container = styled.ul`
   background-color: bisque;
 `;
-export { Item, Status, Container };
+export { Status, Container };

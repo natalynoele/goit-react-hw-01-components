@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-const State = ({ id, label, quantity }) => {
+const State = ({ label, quantity }) => {
   return (
-    <li key={id}>
+    <li>
       <span>{label}</span>
       <span>{quantity}</span>
     </li>
@@ -10,9 +10,8 @@ const State = ({ id, label, quantity }) => {
 };
 
 State.propTypes = {
-  id: PropTypes.string,
   label: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
-}
+};
 
 export default State;
