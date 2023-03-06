@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Container = styled.ul`
-  list-style: none;
   display: flex;
+  list-style: none;
+  background-color: aquamarine;
   li {
     color: white;
     border-right: unset;
-    
   }
   span {
     font-size: 1em;

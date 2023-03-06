@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import State from '../State';
+import State from '../state/State';
 import { StatsList, Wrapper, UserName, Description } from './ProfileStyle';
-
 
 const Profile = ({ username, avatar, tag, location, stats }) => {
   const { followers, likes, views } = stats;

@@ -1,7 +1,7 @@
-import State from 'components/State';
+import State from 'components/state/State';
 import { Container } from './StatisticsStyle';
 
-const StateList = ({ stats, isPercent=true, isRandomColor=true}) => {
+const StateList = ({ stats, isPercent = true, isRandomColor = true }) => {
   return (
     <Container>
       {stats.map(({ id, label, percentage }) => (

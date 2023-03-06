@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
-import { Item, Label, Quantity } from './state/StateStyle';
+import { Item, Label, Quantity } from './StateStyle';
 
-const State = ({ label, quantity, isPercent=false, isRandomColor=false}) => {
+const State = ({
+  label,
+  quantity,
+  isPercent = false,
+  isRandomColor = false,
+}) => {
   return (
     <Item isRandomColor={isRandomColor}>
       <Label>{label}</Label>
