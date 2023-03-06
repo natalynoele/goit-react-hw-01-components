@@ -18,6 +18,7 @@ const App = () => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+
       }}
     >
       <Profile
@@ -30,7 +31,7 @@ const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
-      <TransactionHistory transactions={transactions} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

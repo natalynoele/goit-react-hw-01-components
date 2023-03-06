@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Transaction = ({ type, amount, currency }) => {
   return (
     <tr>
-      <td>{type}</td>
+      <td>{type.charAt(0).toUpperCase() + type.slice(1)}</td>
       <td>{amount}</td>
       <td>{currency}</td>
     </tr>
@@ -12,7 +12,7 @@ const Transaction = ({ type, amount, currency }) => {
 
 Transaction.propTypes = {
   type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };
 

@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Item, Label, Quantity } from './state/StateStyle';
 
-const State = ({ label, quantity }) => {
+const State = ({ label, quantity, isPercent=false, isRandomColor=false}) => {
   return (
-    <Item>
+    <Item isRandomColor={isRandomColor}>
       <Label>{label}</Label>
-      <Quantity>{quantity}</Quantity>
+      <Quantity>
+        {quantity}
+        {isPercent ? '%' : ''}
+      </Quantity>
     </Item>
   );
 };
@@ -14,6 +16,8 @@ const State = ({ label, quantity }) => {
 State.propTypes = {
   label: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
+  isPercent: PropTypes.bool,
+  isRandomColor: PropTypes.bool,
 };
 
 export default State;

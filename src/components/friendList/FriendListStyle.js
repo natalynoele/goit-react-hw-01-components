@@ -13,7 +13,7 @@ margin-bottom: 80px;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px 40px;
     margin: 15px 10px;
     background: white;
     box-shadow: #bbbbbb -2px 4px 10px -1px;
