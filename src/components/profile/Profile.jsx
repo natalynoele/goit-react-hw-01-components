@@ -1,25 +1,26 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
 import State from '../State';
+import { StatsList, Wrapper, UserName } from './ProfileStyle';
+
 
 const Profile = ({ username, avatar, tag, location, stats }) => {
   const { followers, likes, views } = stats;
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <figure className="wrap_avatar">
-          <img src={avatar} className={css.avatar} alt="User avatar" />
+    <Wrapper>
+      <div>
+        <figure>
+          <img src={avatar} alt="User avatar" />
         </figure>
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
+        <UserName>{username}</UserName>
+        <p>@{tag}</p>
+        <p>{location}</p>
       </div>
-      <ul className={css.stats}>
-        <State label="Followers" quantity={followers} className="quantity" />
-        <State label="Views" quantity={views} className="quantity" />
-        <State label="Likes" quantity={likes} className="quantity" />
-      </ul>
-    </div>
+      <StatsList>
+        <State label="Followers" quantity={followers}  />
+        <State label="Views" quantity={views} />
+        <State label="Likes" quantity={likes} />
+      </StatsList>
+    </Wrapper>
   );
 };
 

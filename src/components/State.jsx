@@ -1,22 +1,16 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css'
-import styled from 'styled-components';
 
-const Label = styled.span`
-
-`
-
-
-const State = ({ label, quantity, className }) => {
+const State = ({ id, label, quantity }) => {
   return (
-    <li>
-      <span className={css.label}>{label}</span>
-      <span className={className}>{quantity}</span>
+    <li key={id}>
+      <span>{label}</span>
+      <span>{quantity}</span>
     </li>
   );
 };
 
 State.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
 }

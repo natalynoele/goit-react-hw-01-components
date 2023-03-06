@@ -1,26 +1,31 @@
-const Statistic = ({title, stats}) => (
-  <section class="statistics">
-    <h2 class="title">{title}</h2>
+import PropTypes from 'prop-types';
+import State from "components/State";
+import { Section, Container } from './StatisticsStyle';
 
-    <ul class="stat-list">
-      <li class="item">
-        <span class="label">.docx</span>
-        <span class="percentage">4%</span>
-      </li>
-      <li class="item">
-        <span class="label">.mp3</span>
-        <span class="percentage">14%</span>
-      </li>
-      <li class="item">
-        <span class="label">.pdf</span>
-        <span class="percentage">41%</span>
-      </li>
-      <li class="item">
-        <span class="label">.mp4</span>
-        <span class="percentage">12%</span>
-      </li>
-    </ul>
-  </section>
-);
+const StateList = ({ stats }) => {
+  return (
+    <Container>
+      {stats.map(({ id, label, percentage }) => (
+        <State key={id} label={label} quantity={percentage} />    
+      ))}
+    </Container>
+  );
+}
+
+const Statistic = ({title, stats}) => {
+  return (
+    <Section>
+      { title ? <h2>{title}</h2> : null}
+       <StateList stats={stats} />
+    </Section>
+  );    
+};
+
+Statistic.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape
+  ),
+};
 
 export default Statistic;
